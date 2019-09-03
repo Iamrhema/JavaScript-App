@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>calculator</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/task3.css">
+</head>
+<body onload = "hidework()">
+  <header>
+    <nav>
+      <ul>
+        <li ><a href="#" onclick="showCounter()">Counter</a></li>
+        <li><a href="#" onclick="showConverter()">Converter</a></li>
+        <li ><a href="#" onclick="showCalculator()">Calculator</a></li>
+        <li ><a href="#" onclick="showDropdown()">DropDown</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="countercontainer" class="items" >
+
+    <h2 >Counter</h2>
+    <div id="counter">
+      <p id="resultant"></p>
+      <!-- buttons to show and hide calculator -->
+
+      <button onclick="counter()" type="button" id="clicker">check</button>
+    </div>
+  </div>
+
+  <div id="converter">
+    <h2 >Converter</h2>
+    <!-- convereter table -->
+    <form name="converter">
+      <table>
+        <tr>
+          <!-- euro conversion -->
+          <td>Enter Rand value here:<input type="text" name="rand" onChange="euroConverter()" /></td>
+        </tr>
+        <tr>
+          <!-- dollar conversion -->
+          <td>Dollar:<input type="text" name="dollar" onChange="dollarConverter()" /></td>
+        </tr>
+        <tr>
+          <!-- pound conversion -->
+          <td>Pound:<input type="text" name="pound" onChange="poundConverter()" /></td>
+        </tr>
+        <tr>
+          <!-- yen conversion -->
+          <td>Euro<input type="text" name="euro" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="Convert!" /></td>
+        </tr>
+
+      </table>
+    </form>    
+  </div>
+
+  <div id="calculatorbox">
+    <!-- calculator space  -->
+    <h2 >Calculator</h2>
+    <div id="calculator">
+
+      <!-- space to show calculator keys being pressed -->
+      <div id="inputLabel">0</div>
+      <!-- calculator keys -->
+      <div id="keyboard">
+        <button class="operator" onclick="pushBtn(this);">.</button>
+        <button class="operator" onclick="pushBtn(this);">AC</button>
+        <button class="operator" onclick="pushBtn(this);">/</button>
+        <button class="operator" onclick="pushBtn(this);">=</button>
+        <button class="number" onclick="pushBtn(this);">7</button>
+        <button class="number" onclick="pushBtn(this);">8</button>
+        <button class="number" onclick="pushBtn(this);">9</button>
+        <button class="operator" onclick="pushBtn(this);">*</button>
+        <button class="number" onclick="pushBtn(this);">4</button>
+        <button class="number" onclick="pushBtn(this);">5</button>
+        <button class="number" onclick="pushBtn(this);">6</button>
+        <button class="operator" onclick="pushBtn(this);">-</button>
+        <button class="number"  onclick="pushBtn(this);">1</button>
+        <button class="number" onclick="pushBtn(this);">2</button>
+        <button class="number" onclick="pushBtn(this);">3</button>
+        <button class="number"  onclick="pushBtn(this);">+</button>
+        <button class="empty"></button>
+        <button class="number"  onclick="pushBtn(this);">0</button>
+        <button class="empty"></button>      
+      </div>
+    </div>
+  </div>
+
+
+  <div id="dropDown">
+    <h2 >Drop-down</h2>
+    <select id="names">
+
+    </select>
+  </div>
+
+
+  <script rel="stylesheet" src="./js/task3.js"></script>             
+</body>
+</html>
